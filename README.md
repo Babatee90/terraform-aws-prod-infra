@@ -19,3 +19,47 @@ The infrastructure provisions:
 ---
 
 ## Repository Structure
+terraform-aws-prod-infra/
+├── modules/
+│ ├── vpc/ # VPC, subnet, routing
+│ └── ec2/ # EC2 instance and security group
+├── envs/
+│ └── dev/ # Root (parent) module
+├── .gitignore
+└── README.md
+
+- **modules/** contains reusable child modules
+- **envs/dev/** is the root module where Terraform is executed
+
+---
+
+## Architecture
+Internet
+|
+[ Internet Gateway ]
+|
+[ Public Subnet ]
+|
+[ EC2 Instance (Nginx) ]
+
+
+---
+
+## Tech Stack
+- **Terraform** (>= 1.5)
+- **AWS**
+  - VPC
+  - EC2
+  - Security Groups
+  - Internet Gateway
+
+---
+
+## How to Deploy
+
+### Prerequisites
+- AWS account
+- AWS CLI configured:
+  ```bash
+  aws configure
+
