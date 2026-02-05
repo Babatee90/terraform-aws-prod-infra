@@ -61,5 +61,15 @@ Internet
 - AWS account
 - AWS CLI configured:
   ```bash
+
+  terraform init
+terraform plan
+terraform apply
+
+## Author
+
+ Babatola Adeniyi
+GitHub: https://github.com/Babatee90  
+
   aws configure
 
